@@ -1,0 +1,67 @@
+/* Custom styles to complement Tailwind */
+
+* {
+  font-family: "Nunito", sans-serif !important;
+}
+
+#recentCities div:hover {
+  background-color: #f3f4f6;
+  cursor: pointer;
+}
+
+@media (max-width: 640px) {
+  #currentWeather {
+    flex-direction: column;
+    text-align: center;
+  }
+}
+
+/* <!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Weather App</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+  </head>
+  <body class="bg-gray-100 flex justify-center items-center min-h-screen">
+    <div class="w-full max-w-lg p-6 bg-white rounded-lg shadow-md">
+      <h2 class="text-2xl font-bold text-center mb-4">Weather Forecast</h2>
+      <div class="flex mb-4">
+        <input
+          type="text"
+          id="cityInput"
+          placeholder="Enter city name"
+          class="flex-grow p-2 border rounded-l-md focus:outline-none"
+        />
+        <button id="searchBtn" class="px-4 bg-blue-500 text-white rounded-r-md">
+          Search
+        </button>
+      </div>
+      <button
+        id="currentLocationBtn"
+        class="w-full bg-green-500 text-white py-2 rounded-md mb-4"
+      >
+        Use Current Location
+      </button>
+      <select
+        id="recentCities"
+        class="w-full p-2 border rounded-md mb-4 hidden"
+      ></select>
+      <div id="weatherContainer" class="text-center hidden">
+        <h3 id="cityName" class="text-xl font-semibold"></h3>
+        <p id="weatherDescription" class="text-gray-600"></p>
+        <img id="weatherIcon" class="mx-auto" />
+        <p id="temperature" class="text-lg font-bold"></p>
+        <p id="humidity"></p>
+        <p id="windSpeed"></p>
+      </div>
+      <div id="forecastContainer" class="mt-6 hidden">
+        <h3 class="text-lg font-semibold mb-2">5-Day Forecast</h3>
+        <div id="forecast" class="grid grid-cols-2 gap-4"></div>
+      </div>
+      <p id="errorMessage" class="text-red-500 text-center mt-4 hidden"></p>
+    </div>
+    <script src="script.js"></script>
+  </body>
+</html>  */

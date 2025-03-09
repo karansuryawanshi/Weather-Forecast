@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Weather App</title>
+    <link rel="stylesheet" href="styles.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Nunito:wght@200;400;700;900&display=swap"
+      rel="stylesheet"
+    />
+
+    <script src="https://cdn.tailwindcss.com"></script>
+  </head>
+  <body
+    class="bg-gray-100 flex justify-center items-center w-screen min-h-screen"
+  >
+    <div
+      class="w-full h-full bg-white rounded-lg shadow-md flex md:flex-row flex-col min-h-screen"
+    >
+      <div class="bg-neutral-200 p-6 shadow-lg md:w-1/4 w-full">
+        <h2 class="text-2xl font-bold text-center mb-4">Weather Forecast</h2>
+        <div class="flex flex-col gap-4 my-4 w-auto">
+          <input
+            type="text"
+            id="cityInput"
+            placeholder="Enter city name"
+            class="flex-grow p-2 border rounded-md focus:outline-none"
+          />
+          <button
+            id="searchBtn"
+            class="px-4 py-2 bg-blue-500 text-white rounded-md"
+          >
+            Search
+          </button>
+        </div>
+        <div class="border-b-2 border-neutral-400 w-full bg-neutral-100"></div>
+        <button
+          id="currentLocationBtn"
+          class="w-full bg-green-500 text-white py-2 rounded-md my-4"
+        >
+          Use Current Location
+        </button>
+        <div id="recentSearches" class="hidden">
+          <p class="font-semibold">Recent Searches</p>
+          <select
+            id="recentCities"
+            class="w-full p-2 border rounded-md mb-4 hidden"
+          ></select>
+        </div>
+      </div>
+
+      <div class="md:w-3/4 w-auto mx-4">
+        <div
+          id="weatherContainer"
+          class="text-center my-4 bg-blue-200 py-4 rounded-lg hidden"
+        >
+          <h3 id="cityName" class="text-xl font-semibold"></h3>
+          <p id="weatherDescription" class="text-gray-600"></p>
+          <img id="weatherIcon" class="mx-auto" />
+          <p id="temperature" class="text-lg font-bold"></p>
+          <p id="humidity"></p>
+          <p id="windSpeed"></p>
+        </div>
+        <div id="forecastContainer" class="hidden mb-6">
+          <h3 class="text-lg font-semibold mb-2">5-Day Forecast</h3>
+          <div
+            id="forecast"
+            class="grid grid-cols-1 md:grid-cols-3 gap-4"
+          ></div>
+        </div>
+        <p id="errorMessage" class="text-red-500 text-center mt-4 hidden"></p>
+      </div>
+    </div>
+    <script src="script.js"></script>
+  </body>
+</html>
